@@ -1,8 +1,5 @@
 package;
 
-#if desktop
-import Discord.DiscordClient;
-#end
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
@@ -55,11 +52,6 @@ class Credits extends MusicBeatState
 
 	override function create()
 	{
-		#if desktop
-		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
-		#end
-
 		bg = new FlxSprite().loadGraphic(Paths.image('creditsBGTest'));
         bg.x -= 10;
 		bg.y -= 20;
